@@ -1,7 +1,14 @@
+html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
     outline: none;
     font-family: 'Roboto', sans-serif;
 }
@@ -43,6 +50,7 @@ nav {
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -56,8 +64,6 @@ nav {
     margin: 4px;
     transition: all 0.3s ease;
 }
-
-
 
 @media screen and (max-width:768px){
     body {
@@ -108,8 +114,6 @@ nav {
     transform: translateY(-8px) rotate(45deg)
 }
 
-
-
 .nav-links li a:before,
 .nav-links li a:after{
     content: '';
@@ -131,89 +135,21 @@ nav {
     transform-origin: right;
 }
 
-
 .nav-links li a:hover::before,
 .nav-links li a:hover::after{
     transform: scaleX(1);
 }
 
-.wrapper{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    padding: 0 20px;
-}
-
-.contact-form{
+.text {
     display: flex;
-    max-width: 550px;
-    margin: 0 auto;
-    background: rgba(0,0,0,0.8);
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-.input-fields{
-    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    margin-right: 4%;
+    width: 50%;
+    text-align: justify;
 }
 
-.input-fields, 
-.msg{
-    width: 48%;
-}
-
-.input-fields .input,
-.msg textarea{
-    margin: 10px 0;
-    background: transparent;
-    border: 0;
-    border-bottom: 2px solid #ffffff;
-    padding: 10px;
-    color: #696969;
-    width: 100%;
-}
-
-.msg textarea{
-    height: 212px;
-    resize: none;
-}
-
-.button{
-    background-color: white;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 15px 32px;
-    border-radius: 5px;
-    color: black;
-    margin: 4px 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: 100%;
-}
-
-@media screen and (max-width: 600px){
-    .contact-form{
-        flex-direction: column;
-    }
-    .msg textarea{
-        height: 80px;
-    }
-    .input-fields,
-    .msg{
-        width: 100%;
-    }
-}
-
-h1{
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    color: #696969;
+img {
+    display: flex;
+    align-items: center;
 }
